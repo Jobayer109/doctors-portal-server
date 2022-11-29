@@ -48,7 +48,6 @@ const dbConnect = async () => {
 
       const query = {};
       const options = await appointmentCollection.find(query).toArray();
-      // console.log(options);
       const queryByDate = { appointmentDate: date };
       const alreadyBooked = await bookingCollection.find(queryByDate).toArray();
 
